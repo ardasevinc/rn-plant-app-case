@@ -20,6 +20,11 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@ardasevinc/prettier-config@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@ardasevinc/prettier-config/-/prettier-config-0.1.4.tgz#18aa27b252006d045d0b9cc0681a44235e0ade03"
+  integrity sha512-nR09iKTWyyXBpo+PStUfaP/AKhPPXYCiL/L8RAsA5Du3c1uNadaqCWEo64Yp92X3cU8phBisl7bFCF+x1J9cgg==
+
 "@babel/code-frame@7.10.4", "@babel/code-frame@~7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
