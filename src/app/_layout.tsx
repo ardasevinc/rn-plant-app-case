@@ -1,9 +1,16 @@
-import { Stack } from 'expo-router';
+import { View } from 'react-native';
+import { Slot } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import tw, { useDeviceContext } from 'twrnc';
 
 export default function RootLayout() {
+  useDeviceContext(tw);
+
   return (
-    <Stack>
-      <Stack.Screen name='index' options={{ headerShown: false }} />
-    </Stack>
+    <SafeAreaProvider>
+      <View style={tw`flex-1`}>
+        <Slot />
+      </View>
+    </SafeAreaProvider>
   );
 }
