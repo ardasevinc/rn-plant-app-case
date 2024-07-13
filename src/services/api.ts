@@ -2,7 +2,7 @@ import { CategoriesApiResponse } from '@/types/category.type';
 import { QuestionsApiResponse } from '@/types/question.type';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const apiSlice = createApi({
+export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://dummy-api-jtg6bessta-ey.a.run.app',
@@ -17,4 +17,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetQuestionsQuery, useGetCategoriesQuery } = apiSlice;
+export const { useGetQuestionsQuery, useGetCategoriesQuery } = api;
