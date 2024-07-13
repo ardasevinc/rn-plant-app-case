@@ -3,8 +3,8 @@ import tw from 'twrnc';
 
 export default function Index() {
   return (
-    <View style={tw`bg-black flex-1`}>
-      <Text>TEST</Text>
+    <View style={tw`flex-1 justify-center items-center`}>
+      <Text style={tw`text-xl`}>TEST</Text>
     </View>
   );
 }
