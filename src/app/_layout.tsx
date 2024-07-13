@@ -4,21 +4,22 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { router, Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import tw, { useDeviceContext } from 'twrnc';
+import { getOnboardingCompleted } from '@/utils/storage';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   useDeviceContext(tw);
   const [appReady, setAppReady] = useState(true);
-  const [skipOnboarding, setSkipOnboarding] = useState(false);
 
   useEffect(() => {
     async function bootApp() {
       try {
-        if (skipOnboarding === false) {
+        const onboardingCompleted = await getOnboardingCompleted();
+
+        if (!onboardingCompleted) {
           router.replace('/onboarding');
         }
-        await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (error) {
         console.warn(error);
       } finally {
