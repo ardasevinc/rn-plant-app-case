@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 
 export default function OnboardingLayout() {
   return (
-    <Stack>
+    <Stack screenOptions={{ animation: 'slide_from_right' }}>
       <Stack.Screen name='index' />
       <Stack.Screen name='identify-plant' />
       <Stack.Screen name='plant-care-guides' />

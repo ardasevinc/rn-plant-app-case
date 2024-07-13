@@ -10,12 +10,12 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   useDeviceContext(tw);
   const [appReady, setAppReady] = useState(true);
-  const skipOnboarding = useRef(true);
+  const [skipOnboarding, setSkipOnboarding] = useState(false);
 
   useEffect(() => {
     async function bootApp() {
       try {
-        if (skipOnboarding.current === false) {
+        if (skipOnboarding === false) {
           router.replace('/onboarding');
         }
         await new Promise((resolve) => setTimeout(resolve, 2000));
