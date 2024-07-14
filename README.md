@@ -2,10 +2,17 @@
 
 **Status**: The project could not be completed within the deadline.
 
+## Starting the dev server
+
+- clone the repository
+- `yarn install`
+- `yarn start` -> starts the expo dev server.
+- Install the Expo Go app and scan the QR code on the terminal.
+
 ## Project Description
 
 - This is a React Native app created with [Expo](https://expo.dev/).
-- Styling is done mostly with tailwind through (tailwind-react-native-classnames package - twrnc)[https://github.com/jaredh159/tailwind-react-native-classnames]
+- Styling is done mostly with tailwind through [tailwind-react-native-classnames package - twrnc](https://github.com/jaredh159/tailwind-react-native-classnames)
 - Redux store and Redux toolkit query is set up but not yet implemented in the home page
 - Routing is done with Expo Router, following a file based routing pattern.
   - /onboarding screens are handled with Stack routing pattern
