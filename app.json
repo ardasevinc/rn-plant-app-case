@@ -32,9 +32,14 @@
         "expo-font",
         {
           "fonts": [
-            "src/assets/fonts/SF-Pro-Text-Bold.otf",
             "src/assets/fonts/SF-Pro-Text-Regular.otf",
-            "src/assets/fonts/SF-Pro-Text-Semibold.otf"
+            "src/assets/fonts/SF-Pro-Text-Semibold.otf",
+            "src/assets/fonts/SF-Pro-Text-Bold.otf",
+            "src/assets/fonts/Rubik-Light.ttf",
+            "src/assets/fonts/Rubik-Regular.ttf",
+            "src/assets/fonts/Rubik-Medium.ttf",
+            "src/assets/fonts/Rubik-Bold.ttf",
+            "src/assets/fonts/Rubik-Black.ttf"
           ]
         }
       ]
