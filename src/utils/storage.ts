@@ -2,36 +2,58 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const setOnboardingCompleted = async () => {
   try {
-    await AsyncStorage.setItem('onboardingCompleted', 'true');
+    await AsyncStorage.setItem('onboardingStatus', 'completed');
   } catch (error) {
-    console.error(error, 'error saving data to AsyncStorage');
+    console.error(
+      error,
+      'setOnboardingCompleted: error saving data to AsyncStorage',
+    );
   }
 };
 
-const getOnboardingCompleted = async () => {
+const getOnboardingStatus = async () => {
   try {
-    const val = await AsyncStorage.getItem('onboardingCompleted');
+    const val = await AsyncStorage.getItem('onboardingStatus');
+    return val;
+  } catch (error) {
+    console.error(
+      error,
+      'getOnboardingStatus: error reading data from AsyncStorage',
+    );
+  }
+};
 
-    if (val === null) {
-      return false;
-    } else {
+const isOnboardingCompleted = async () => {
+  try {
+    const status = await getOnboardingStatus();
+    console.log(status);
+    if (status === 'completed') {
       return true;
+    } else if (status === 'incomplete') {
+      return false;
     }
   } catch (error) {
-    console.error(error, 'error reading data from AsyncStorage');
+    console.error(
+      error,
+      'isOnboardingCompleted: error reading data from AsyncStorage',
+    );
   }
 };
 
-const clearOnboardingCompleted = async () => {
+const clearOnboardingStatus = async () => {
   try {
-    await AsyncStorage.removeItem('onboardingCompleted');
+    await AsyncStorage.setItem('onboardingStatus', 'incomplete');
   } catch (error) {
-    console.error(error, 'error clearing data from AsyncStorage');
+    console.error(
+      error,
+      'clearOnboardingStatus: error clearing data from AsyncStorage',
+    );
   }
 };
 
 export {
   setOnboardingCompleted,
-  getOnboardingCompleted,
-  clearOnboardingCompleted,
+  getOnboardingStatus,
+  isOnboardingCompleted,
+  clearOnboardingStatus,
 };
