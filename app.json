@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ardasevinc.rnplantappcase"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +39,7 @@
             "src/assets/fonts/Rubik-Light.ttf",
             "src/assets/fonts/Rubik-Regular.ttf",
             "src/assets/fonts/Rubik-Medium.ttf",
+            "src/assets/fonts/Rubik-SemiBold.ttf",
             "src/assets/fonts/Rubik-Bold.ttf",
             "src/assets/fonts/Rubik-Black.ttf",
             "src/assets/fonts/FONTSPRINGDEMO-VisbyCFExtraBoldRegular.otf"
@@ -47,6 +49,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b117cb8b-4a5e-4d98-b5a9-d095a5856672"
+      }
     }
   }
 }
