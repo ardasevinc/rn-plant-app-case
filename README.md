@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+# Plant App Case
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Status**: The project could not be completed within the deadline.
 
-## Get started
+## Project Description
 
-1. Install dependencies
+- This is a React Native app created with [Expo](https://expo.dev/).
+- Styling is done mostly with tailwind through (tailwind-react-native-classnames package - twrnc)[https://github.com/jaredh159/tailwind-react-native-classnames]
+- Redux store and Redux toolkit query is set up but not yet implemented in the home page
+- Routing is done with Expo Router, following a file based routing pattern.
+  - /onboarding screens are handled with Stack routing pattern
+  - index route `/` is handled as a Tab layout.
+- Onboard completion state is handled with **AsyncStorage**
+- Configured font loading and onboard redirections in `app/_layout.ts`. Splash screen does not hide until initial loading is complete.
 
-   ```bash
-   npm install
-   ```
+### File-Folder Layout
 
-2. Start the app
+All the source code is under `src/` directory.
 
-   ```bash
-    npx expo start
-   ```
+- `app` -> screens and routing logic
+- `assets` -> static assets (images and fonts)
+- `components` -> react components
+- `constants` -> planned to hold theme variables
+- `hooks` -> react hooks
+- `services` -> business logic & api services
+- `types` -> typescript type & interface definitions
+- `utils` -> utility functions
 
-In the output, you'll find options to open the app in a
+## TODO
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [ ] For some reason I can't style the `Pressable` component. Fix it so it is styled according to design requirements.
+- [ ] Finish styling all the screens.
+- [ ] Screens have too much JSX, split up into reusable components.
+- [ ] Implement API fetching in home `/` screen with rtk-query

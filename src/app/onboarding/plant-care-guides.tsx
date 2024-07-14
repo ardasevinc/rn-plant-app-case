@@ -1,14 +1,47 @@
-import { Text, View } from 'react-native';
+import PaginationDots from '@/components/PaginationDots';
+import { Image } from 'expo-image';
 import { Link } from 'expo-router';
+import { Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import tw from 'twrnc';
 
-export default function PlantCareGuides() {
+export default function IdentifyPlant() {
+  const insets = useSafeAreaInsets();
+
   return (
-    <View style={tw`flex-1 items-center justify-center`}>
-      <Text style={tw`text-xl`}>Onboarding Plant Care Guides Screen</Text>
-      <Link href='/premium' replace>
-        Continue
-      </Link>
+    <View
+      style={tw.style('flex-1', {
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+      })}
+    >
+      <View style={tw`flex-1 pt-6 pb-2 items-center justify-between`}>
+        <View style={tw`w-[315px]`}>
+          <Text
+            style={tw.style('text-[28px] leading-[33.18px] tracking-[-1px]', {
+              fontFamily: 'Rubik-Regular',
+              fontWeight: 400,
+              color: 'hsla(150,29%,11%,1)',
+            })}
+          >
+            Get plant{' '}
+            <Text style={tw.style('', { fontFamily: 'Rubik-Black' })}>
+              care guides
+            </Text>{' '}
+          </Text>
+        </View>
+
+        <View style={tw`w-full h-[530px]`}>
+          <Image
+            source={require('@/assets/images/onboarding-2.png')}
+            style={tw`w-full flex-1`}
+          />
+        </View>
+
+        <Link href='/premium'>Continue</Link>
+
+        <PaginationDots totalScreens={2} currentIndex={1} />
+      </View>
     </View>
   );
 }

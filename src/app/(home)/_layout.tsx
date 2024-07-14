@@ -11,7 +11,7 @@ export default function HomeLayout() {
           tabBarIcon: ({ color }) => (
             <FontAwesome size={20} name='home' color={color} />
           ),
-          headerShown: false,
+          header: () => null,
         }}
       />
     </Tabs>

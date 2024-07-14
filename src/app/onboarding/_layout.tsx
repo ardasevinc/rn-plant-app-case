@@ -1,10 +1,9 @@
 import { Stack } from 'expo-router';
-import { Text, View } from 'react-native';
 
 export default function OnboardingLayout() {
   return (
     <Stack
-      screenOptions={{ animation: 'slide_from_right', headerShown: false }}
+      screenOptions={{ animation: 'slide_from_right', header: () => null }}
     >
       <Stack.Screen name='index' />
       <Stack.Screen name='identify-plant' />
